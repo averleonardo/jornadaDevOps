@@ -54,3 +54,24 @@ Repositório dedicado ao registro de estudos, laboratórios e automações.
 
 - **Aprendizado sobre Segurança:**
   Entendi a diferença entre o usuário comum (`$`) e o superusuário (`#`). O uso do `sudo` deve ser consciente, seguindo o princípio do privilégio mínimo para evitar alterações acidentais no sistema.
+
+### Aula 05: Manipulação de Arquivos e Edição de Texto
+
+- **Comandos de Manipulação:**
+  - `touch [arquivo.txt]`: Criação rápida de arquivos vazios.
+  - `nano`: Editor de texto via terminal, essencial para alterar arquivos de configuração.
+  - `tar -czf`: Utilizado para compactação de volumes e criação de backups.
+  - `mv` / `cp`: Comandos para movimentação e cópia de arquivos/diretórios.
+
+- **Redirecionamento de Saída (I/O Redirection):**
+  Pratiquei a diferença crucial entre os operadores de escrita, fundamental para automação de scripts e logs:
+  - `>` (**Sobrescrever**): Substitui todo o conteúdo do arquivo pelo novo texto.
+  - `>>` (**Anexar**): Adiciona o novo texto ao final do arquivo, preservando os dados existentes.
+
+- **Gestão de Riscos (Remoção Definitiva):**
+  No Linux Server, a remoção é definitiva (não existe lixeira). O uso do comando `rm` exige atenção redobrada:
+  - `rm [arquivo]`: Remove um arquivo específico.
+  - `rmdir [diretório]`: Remove apenas diretórios que estejam **completamente vazios**.
+  - `rm -r [diretório]`: Remoção **recursiva**, deletando o diretório e todo o seu conteúdo interno.
+  
+  **Boa prática:** Sempre valide o diretório atual com o comando `pwd` antes de executar uma remoção recursiva para evitar deleções acidentais em caminhos errados.
