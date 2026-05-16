@@ -75,3 +75,15 @@ Repositório dedicado ao registro de estudos, laboratórios e automações.
   - `rm -r [diretório]`: Remoção **recursiva**, deletando o diretório e todo o seu conteúdo interno.
   
   **Boa prática:** Sempre valide o diretório atual com o comando `pwd` antes de executar uma remoção recursiva para evitar deleções acidentais em caminhos errados.
+
+
+  ### Aula 06: Desafio Prático.Estruturação de Projetos:
+Simulação de estruturação de diretórios para um aplicativo educacional em ambiente de Software House.
+
+- **Cenário:** Criação de estrutura hierárquica e movimentação de arquivos fonte e testes.
+- **Resolução do Problema:**
+  - Utilização do `mkdir -p` para criação de pastas aninhadas (`app/src` e `app/tests`) em um único comando, garantindo que os diretórios "pai" fossem gerados automaticamente.
+  - Uso do comando `mv` para organizar arquivos `.py` conforme a arquitetura proposta.
+
+- **Informação:**
+  A organização lógica de diretórios (src, tests, docs) é um padrão de mercado que facilita a implementação de esteiras de **CI/CD**, permitindo que ferramentas automatizadas saibam exatamente onde encontrar o código e os testes.
