@@ -23,7 +23,7 @@ Nesta etapa, explorei a arquitetura do Linux e a importância da escalabilidade 
 - **Mão na Massa:**
   1. Configuração da placa de rede da VM para permitir comunicação com o host.
   2. Identificação do endereço IP através do comando: `ip address`.
-  3. Acesso remoto via terminal Windows (PowerShell) usando o comando:
+  3. Acesso remoto via terminal Windows (CMD) usando o comando:
      ```bash
      ssh usuario@192.168.x.x
      ```
