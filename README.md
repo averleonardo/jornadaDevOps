@@ -32,3 +32,14 @@ Nesta etapa, explorei a arquitetura do Linux e a importância da escalabilidade 
   - [Consulte aqui o Guia de Correção: FIX-SSH-PERMISSION-DENIED.md](./FIX-SSH-PERMISSION-DENIED.md)
 
 - **Resultado:** Ambiente de laboratório acessível remotamente
+
+### Aula 03: Navegação e Gerenciamento de Arquivos no CLI
+
+- **Comandos Praticados:**
+  - `pwd`: Exibe o caminho completo (Path) do diretório atual.
+  - `ls -la`: Lista todos os arquivos, incluindo ocultos, com detalhes de permissões, tamanho e proprietário.
+  - `cd [diretório]`: Navegação entre pastas do sistema.
+
+- **Insights Técnicos:**
+  - Arquivos ocultos no Linux começam com um ponto (`.`). Eles geralmente guardam configurações críticas de perfil (como o `.bashrc` ou chaves SSH).
+  - A flag `-l` é vital para troubleshooting de permissões, permitindo identificar rapidamente se um serviço tem acesso de leitura/escrita em um diretório.
