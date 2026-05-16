@@ -87,3 +87,15 @@ Simulação de estruturação de diretórios para um aplicativo educacional em a
 
 - **Informação:**
   A organização lógica de diretórios (src, tests, docs) é um padrão de mercado que facilita a implementação de esteiras de **CI/CD**, permitindo que ferramentas automatizadas saibam exatamente onde encontrar o código e os testes.
+
+
+### Aula 07: Filtros e Wildcards (Coringas) no CLI
+Aprendi a utilizar metacaracteres para filtrar saídas do comando `ls` para lidar com grandes volumes de dados.
+
+- **Comandos Praticados:**
+  - `*` (Asterisco): Representa qualquer quantidade de caracteres. Ex: `ls arc*` traz `arcf1`, `arcf40`, etc.
+  - `?` (Interrogação): Representa exatamente um caractere curinga.
+  - `[ ]` (Colchetes): Permite definir um intervalo. Ex: `ls data[1-5]` listaria data1 até data5.
+
+- **Informação:**
+  Essa técnica é utilizada em scripts de limpeza de logs (ex: `rm log_2024*.log`) ou em backups automáticos de arquivos com extensões específicas.
