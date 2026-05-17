@@ -2,7 +2,7 @@
 
 Repositório dedicado ao registro de estudos, laboratórios e automações.
 
-### Aula 01: Introdução ao Mundo DevOps e Virtualização
+### Introdução ao Mundo DevOps e Virtualização
 - **Conceito:** Aprendi que DevOps é uma cultura de integração entre Dev e Ops para maior agilidade e segurança.
 - **Laboratório:** Instalação do VirtualBox e criação da primeira VM com Ubuntu Server (Ubuntu 25.04).
 - **Configurações da VM:**
@@ -10,7 +10,7 @@ Repositório dedicado ao registro de estudos, laboratórios e automações.
   - RAM: 4096 MB
   - Disco: 25GB (LVM habilitado)
 
-### Aula 02: Fundamentos de Linux e Acesso Remoto
+### Fundamentos de Linux e Acesso Remoto
 
 - **Conceitos:**
   - **Kernel:** O núcleo do sistema operacional.
@@ -30,7 +30,7 @@ Repositório dedicado ao registro de estudos, laboratórios e automações.
 
 - **Resultado:** Ambiente de laboratório acessível remotamente
 
-### Aula 03: Navegação e Gerenciamento de Arquivos no CLI
+### Navegação e Gerenciamento de Arquivos no CLI
 
 - **Comandos Praticados:**
   - `pwd`: Exibe o caminho completo (Path) do diretório atual.
@@ -41,7 +41,7 @@ Repositório dedicado ao registro de estudos, laboratórios e automações.
   - Arquivos ocultos no Linux começam com um ponto (`.`). Eles geralmente guardam configurações críticas de perfil (como o `.bashrc` ou chaves SSH).
   - A flag `-l` é vital para troubleshooting de permissões, permitindo identificar rapidamente se um serviço tem acesso de leitura/escrita em um diretório.
  
-- ### Aula 04: Comandos Essenciais e Gestão de Privilégios (SUDO)
+- ### Comandos Essenciais e Gestão de Privilégios (SUDO)
 
 - **Comandos de Gerenciamento:**
   - `mkdir [nome]`: Criação de novos diretórios.
@@ -55,7 +55,7 @@ Repositório dedicado ao registro de estudos, laboratórios e automações.
 - **Aprendizado sobre Segurança:**
   Entendi a diferença entre o usuário comum (`$`) e o superusuário (`#`). O uso do `sudo` deve ser consciente, seguindo o princípio do privilégio mínimo para evitar alterações acidentais no sistema.
 
-### Aula 05: Manipulação de Arquivos e Edição de Texto
+### Manipulação de Arquivos e Edição de Texto
 
 - **Comandos de Manipulação:**
   - `touch [arquivo.txt]`: Criação rápida de arquivos vazios.
@@ -77,7 +77,7 @@ Repositório dedicado ao registro de estudos, laboratórios e automações.
   **Boa prática:** Sempre valide o diretório atual com o comando `pwd` antes de executar uma remoção recursiva para evitar deleções acidentais em caminhos errados.
 
 
-  ### Aula 06: Desafio Prático.Estruturação de Projetos:
+  ### Desafio Prático.Estruturação de Projetos:
 Simulação de estruturação de diretórios para um aplicativo educacional em ambiente de Software House.
 
 - **Cenário:** Criação de estrutura hierárquica e movimentação de arquivos fonte e testes.
