@@ -159,4 +159,4 @@ echo "Backup concluído com sucesso: $nome_arquivo"
 
 **Resolução de Problemas:**
 Durante a automação, identifiquei falhas na chamada de variáveis e permissões de execução:
-- [Consulte aqui o Guia de Correção: FIX-SHELL-VARIABLE-REFERENCE.md](./FIX-SHELL-VARIABLE-REFERENCE.md)
+- [Consulte aqui o Guia de Correção: FIX-SHELL-VARIABLE-REFERENCE.md](.FIX-SHELL-VARIABLE-REFERENCE)
