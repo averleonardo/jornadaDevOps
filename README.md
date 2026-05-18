@@ -99,3 +99,14 @@ Aprendi a utilizar metacaracteres para filtrar saídas do comando `ls` para lida
 
 - **Informação:**
   Essa técnica é utilizada em scripts de limpeza de logs (ex: `rm log_2024*.log`) ou em backups automáticos de arquivos com extensões específicas.
+
+### Prática de Manipulação e Fluxo de Arquivos
+
+- **Fluxo de Trabalho:**
+  1. **Criação em lote:** `mkdir dir1 dir2` (criação de múltiplos diretórios em um único comando).
+  2. **Povoamento:** Uso do `touch` + [`arquivo1 + arquivo 2`] para criar arquivos de dados simulados.
+  3. **Cópia Seletiva:** `cp -r dir1/* dir2` (uso do wildcard `*` para copiar apenas o conteúdo interno).
+  4. **Migração:** `mv dir1/* dir3` (movimentação total de arquivos, deixando o diretório de origem vazio).
+
+- **Informação:**
+  A movimentação de arquivos (`mv`) no Linux, quando feita dentro da mesma partição de disco, é quase instantânea, pois o sistema apenas altera os "ponteiros" do arquivo no sistema de arquivos, sem precisar reescrever os dados fisicamente.
