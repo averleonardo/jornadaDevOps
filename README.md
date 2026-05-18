@@ -89,7 +89,7 @@ Simulação de estruturação de diretórios para um aplicativo educacional em a
   A organização lógica de diretórios (src, tests, docs) é um padrão de mercado que facilita a implementação de esteiras de **CI/CD**, permitindo que ferramentas automatizadas saibam exatamente onde encontrar o código e os testes.
 
 
-### Aula 07: Filtros e Wildcards (Coringas) no CLI
+### Filtros e Wildcards (Coringas) no CLI
 Aprendi a utilizar metacaracteres para filtrar saídas do comando `ls` para lidar com grandes volumes de dados.
 
 - **Comandos Praticados:**
