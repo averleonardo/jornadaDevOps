@@ -25,12 +25,13 @@ Repositório dedicado ao registro de estudos, laboratórios e automações.
      ```bash
      ssh usuario@192.168.x.x
      ```
-     <img width="854" height="313" alt="image" src="https://github.com/user-attachments/assets/dc9c6bfd-34c1-4ffd-b626-2ead530dd3ac" />
-     <img width="684" height="255" alt="image" src="https://github.com/user-attachments/assets/14bc39ce-a888-4d60-ae08-eb1d3394fd88" />
+  <img width="854" height="313" alt="image" src="https://github.com/user-attachments/assets/dc9c6bfd-34c1-4ffd-b626-2ead530dd3ac" />
+  <img width="684" height="255" alt="image" src="https://github.com/user-attachments/assets/14bc39ce-a888-4d60-ae08-eb1d3394fd88" />
 
 **Resolução de Problemas:**
   Durante a configuração do acesso remoto, enfrentei o erro `Permission Denied`. O processo de correção foi documentado detalhadamente no arquivo específico deste repositório:
 - [Consulte aqui o Guia de Correção: FIX-SSH-PERMISSION-DENIED.md](./FIX-SSH-PERMISSION-DENIED.md)
+  <img width="1029" height="120" alt="image" src="https://github.com/user-attachments/assets/6d52df62-655a-4fcb-8006-1618f9836ed1" />
 
 - **Resultado:** Ambiente de laboratório acessível remotamente
 
@@ -40,6 +41,7 @@ Repositório dedicado ao registro de estudos, laboratórios e automações.
   - `pwd`: Exibe o caminho completo (Path) do diretório atual.
   - `ls -la`: Lista todos os arquivos, incluindo ocultos, com detalhes de permissões, tamanho e proprietário.
   - `cd [diretório]`: Navegação entre pastas do sistema.
+  <img width="680" height="828" alt="image" src="https://github.com/user-attachments/assets/9c36c462-a8f1-432e-a442-54413866db57" />
 
 - **Informação:**
   - Arquivos ocultos no Linux começam com um ponto (`.`). Eles geralmente guardam configurações críticas de perfil (como o `.bashrc` ou chaves SSH).
@@ -52,6 +54,7 @@ Repositório dedicado ao registro de estudos, laboratórios e automações.
   - `history`: Exibe o histórico de comandos.
   - `sudo`: Permite executar tarefas com privilégios de administrador (root).
   - `apt update`: Sincroniza os repositórios para verificar atualizações de segurança e software.
+  <img width="679" height="520" alt="image" src="https://github.com/user-attachments/assets/a7e0fe24-7161-4c15-b2e2-207f8f30ec08" />
 
 - **Informação:**
   O Shell atua como uma camada de proteção entre o usuário e o Kernel. Ele interpreta os comandos e garante que apenas instruções válidas sejam processadas.
@@ -66,18 +69,21 @@ Repositório dedicado ao registro de estudos, laboratórios e automações.
   - `nano`: Editor de texto via terminal, essencial para alterar arquivos de configuração.
   - `tar -czf`: Utilizado para compactação de volumes e criação de backups.
   - `mv` / `cp`: Comandos para movimentação e cópia de arquivos/diretórios.
+  <img width="741" height="1023" alt="image" src="https://github.com/user-attachments/assets/ad960072-07be-4c08-a1c1-864a4d9c310f" />
 
 - **Redirecionamento de Saída (I/O Redirection):**
   Pratiquei a diferença crucial entre os operadores de escrita, fundamental para automação de scripts e logs:
   - `>` (**Sobrescrever**): Substitui todo o conteúdo do arquivo pelo novo texto.
   - `>>` (**Anexar**): Adiciona o novo texto ao final do arquivo, preservando os dados existentes.
+  <img width="531" height="215" alt="image" src="https://github.com/user-attachments/assets/8adda30a-bcaf-473e-a38e-ade7a0bfee96" />
 
 - **Gestão de Riscos (Remoção Definitiva):**
   No Linux Server, a remoção é definitiva (não existe lixeira). O uso do comando `rm` exige atenção redobrada:
   - `rm [arquivo]`: Remove um arquivo específico.
   - `rmdir [diretório]`: Remove apenas diretórios que estejam **completamente vazios**.
   - `rm -r [diretório]`: Remoção **recursiva**, deletando o diretório e todo o seu conteúdo interno.
-  
+  <img width="630" height="267" alt="image" src="https://github.com/user-attachments/assets/eb728079-54a2-4819-babe-ba213fcde047" />
+
   **Boa prática:** Sempre valide o diretório atual com o comando `pwd` antes de executar uma remoção recursiva para evitar deleções acidentais em caminhos errados.
 
 
@@ -88,6 +94,7 @@ Simulação de estruturação de diretórios para um aplicativo educacional em a
 - **Resolução do Problema:**
   - Utilização do `mkdir -p` para criação de pastas aninhadas (`app/src` e `app/tests`) em um único comando, garantindo que os diretórios "pai" fossem gerados automaticamente.
   - Uso do comando `mv` para organizar arquivos `.py` conforme a arquitetura proposta.
+  <img width="1235" height="182" alt="image" src="https://github.com/user-attachments/assets/f7926128-17de-42c3-95db-512034e8e1f3" />
 
 - **Informação:**
   A organização lógica de diretórios (src, tests, docs) é um padrão de mercado que facilita a implementação de esteiras de **CI/CD**, permitindo que ferramentas automatizadas saibam exatamente onde encontrar o código e os testes.
@@ -124,6 +131,7 @@ Aprendi a utilizar metacaracteres para filtrar saídas do comando `ls` para lida
   4. **Manipulação de Saída (I/O Redirection):**
      - **Escrita:** `echo "Olá, Mundo!" > saudacao.txt` (Uso do operador de sobrescrita).
      - **Concatenação:** `echo "Bem-vindo ao Linux!" >> saudacao.txt` (Uso do operador de anexo para preservar dados anteriores).
+  <img width="703" height="214" alt="image" src="https://github.com/user-attachments/assets/10ef01f1-bc29-4567-b6b7-ce9c332148a1" />
 
 - **Informação:**
   A distinção entre os operadores `>` e `>>` é um pilar da segurança operacional em Linux. O uso incorreto do operador de sobrescrita em arquivos de log ou tabelas de configuração pode causar perda de dados irreversível, sendo a concatenação (`>>`) a prática recomendada para registros históricos.
@@ -140,6 +148,7 @@ Aprendi a utilizar metacaracteres para filtrar saídas do comando `ls` para lida
   2. Geração de nome de arquivo com **Timestamp** (ano/mês/dia_hora/min/seg) para garantir unicidade e rastreabilidade.
   3. Compactação via `tar -czf` (criação, compressão gzip e definição de nome de arquivo).
   4. Notificação de conclusão via `echo`.
+  <img width="899" height="309" alt="image" src="https://github.com/user-attachments/assets/80c92bd3-86e0-4750-9859-17e3491fe54e" />
 
 - **Execução e Permissões:**
   - `chmod +x backup.sh`: Comando vital que atribui permissão de **execução** ao script. Sem isso, o Linux o trata apenas como um arquivo de texto comum.
@@ -164,3 +173,4 @@ echo "Backup concluído com sucesso: $nome_arquivo"
 **Resolução de Problemas:**
 Durante a automação, identifiquei falhas na chamada de variáveis e permissões de execução:
 - [Consulte aqui o Guia de Correção: FIX-SHELL-VARIABLE-REFERENCE.md](./FIX-SHELL-VARIABLE-REFERENCE.mb)
+  <img width="898" height="310" alt="image" src="https://github.com/user-attachments/assets/27a7093f-1a9d-4c8b-a5b1-76ca7c5e7359" />
