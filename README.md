@@ -41,7 +41,7 @@ Repositório dedicado ao registro de estudos, laboratórios e automações.
   - Arquivos ocultos no Linux começam com um ponto (`.`). Eles geralmente guardam configurações críticas de perfil (como o `.bashrc` ou chaves SSH).
   - A flag `-l` é vital para troubleshooting de permissões, permitindo identificar rapidamente se um serviço tem acesso de leitura/escrita em um diretório.
  
-- ### Comandos Essenciais e Gestão de Privilégios (SUDO)
+### Comandos Essenciais e Gestão de Privilégios (SUDO)
 
 - **Comandos de Gerenciamento:**
   - `mkdir [nome]`: Criação de novos diretórios.
@@ -77,7 +77,7 @@ Repositório dedicado ao registro de estudos, laboratórios e automações.
   **Boa prática:** Sempre valide o diretório atual com o comando `pwd` antes de executar uma remoção recursiva para evitar deleções acidentais em caminhos errados.
 
 
-  ### Desafio Prático.Estruturação de Projetos:
+### Desafio Prático. Estruturação de Projetos:
 Simulação de estruturação de diretórios para um aplicativo educacional em ambiente de Software House.
 
 - **Cenário:** Criação de estrutura hierárquica e movimentação de arquivos fonte e testes.
@@ -104,14 +104,14 @@ Aprendi a utilizar metacaracteres para filtrar saídas do comando `ls` para lida
 
 - **Fluxo de Trabalho:**
   1. **Criação em lote:** `mkdir dir1 dir2` (criação de múltiplos diretórios em um único comando).
-  2. **Povoamento:** Uso do `touch` + [`arquivo1 + arquivo 2`] para criar arquivos de dados simulados.
+  2. **Povoamento:** Uso do `touch data1 data2` para criar arquivos de dados simulados.
   3. **Cópia Seletiva:** `cp -r dir1/* dir2` (uso do wildcard `*` para copiar apenas o conteúdo interno).
   4. **Migração:** `mv dir1/* dir3` (movimentação total de arquivos, deixando o diretório de origem vazio).
 
 - **Informação:**
   A movimentação de arquivos (`mv`) no Linux, quando feita dentro da mesma partição de disco, é quase instantânea, pois o sistema apenas altera os "ponteiros" do arquivo no sistema de arquivos, sem precisar reescrever os dados fisicamente.
 
-  ### Prática Geral de Navegação e Fluxos de Dados
+### Prática Geral de Navegação e Fluxos de Dados
 
 - **Fluxo de Trabalho:**
   1. **Organização de Espaço:** `mkdir Docs` (Criação de diretório para estruturação de arquivos).
@@ -123,3 +123,40 @@ Aprendi a utilizar metacaracteres para filtrar saídas do comando `ls` para lida
 
 - **Informação:**
   A distinção entre os operadores `>` e `>>` é um pilar da segurança operacional em Linux. O uso incorreto do operador de sobrescrita em arquivos de log ou tabelas de configuração pode causar perda de dados irreversível, sendo a concatenação (`>>`) a prática recomendada para registros históricos.
+
+### Introdução ao Shell Scripting e Automação de Backup
+
+- **Conceitos de Scripting:**
+  - **Shebang (`#!/bin/bash`):** Linha obrigatória no início do script que informa ao sistema qual interpretador deve processar os comandos.
+  - **Variáveis:** Utilizadas para tornar o script dinâmico e fácil de manter (ex: `diretorio_backup`).
+  - **Substituição de Comando `$( )`:** Permite executar um comando (como o `date`) e usar sua saída diretamente no nome de um arquivo ou variável.
+
+- **Workflow do Script de Backup:**
+  1. Definição do diretório de origem.
+  2. Geração de nome de arquivo com **Timestamp** (ano/mês/dia_hora/min/seg) para garantir unicidade e rastreabilidade.
+  3. Compactação via `tar -czf` (criação, compressão gzip e definição de nome de arquivo).
+  4. Notificação de conclusão via `echo`.
+
+- **Execução e Permissões:**
+  - `chmod +x backup.sh`: Comando vital que atribui permissão de **execução** ao script. Sem isso, o Linux o trata apenas como um arquivo de texto comum.
+  - `./backup.sh` ou `bash backup.sh`: Execução da rotina automatizada.
+
+- **Informação:**
+  A automação de backups com timestamps é uma prática padrão em auditorias bancárias. Ela evita a sobrescrita de dados e permite o **Point-in-Time Recovery**, garantindo que possamos recuperar o estado exato do sistema em um momento específico do tempo.
+
+!```bash
+#!/bin/bash
+
+# Definição de variáveis
+diretorio_backup="/home/leonardoaver/devops"
+nome_arquivo="backup_$(date +%Y%m%d_%H%M%S).tar.gz"
+
+# Execução do backup
+tar -czf "$nome_arquivo" "$diretorio_backup"
+
+# Feedback ao usuário
+echo "Backup concluído com sucesso: $nome_arquivo"
+
+**Resolução de Problemas:**
+Durante a automação, identifiquei falhas na chamada de variáveis e permissões de execução:
+- [Consulte aqui o Guia de Correção: FIX-SHELL-VARIABLE-REFERENCE.md](./FIX-SHELL-VARIABLE-REFERENCE.md)
