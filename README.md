@@ -9,6 +9,7 @@ Repositório dedicado ao registro de estudos, laboratórios e automações.
   - CPU: 2 vCPUs
   - RAM: 4096 MB
   - Disco: 25GB (LVM habilitado)
+<img width="911" height="627" alt="image" src="https://github.com/user-attachments/assets/1cea1cf9-dac0-430e-b83c-bd1b9a35a947" />
 
 ### Fundamentos de Linux e Acesso Remoto
 
