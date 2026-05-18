@@ -25,6 +25,9 @@ Repositório dedicado ao registro de estudos, laboratórios e automações.
      ```bash
      ssh usuario@192.168.x.x
      ```
+     <img width="854" height="313" alt="image" src="https://github.com/user-attachments/assets/dc9c6bfd-34c1-4ffd-b626-2ead530dd3ac" />
+     <img width="684" height="255" alt="image" src="https://github.com/user-attachments/assets/14bc39ce-a888-4d60-ae08-eb1d3394fd88" />
+
 **Resolução de Problemas:**
   Durante a configuração do acesso remoto, enfrentei o erro `Permission Denied`. O processo de correção foi documentado detalhadamente no arquivo específico deste repositório:
 - [Consulte aqui o Guia de Correção: FIX-SSH-PERMISSION-DENIED.md](./FIX-SSH-PERMISSION-DENIED.md)
@@ -145,7 +148,7 @@ Aprendi a utilizar metacaracteres para filtrar saídas do comando `ls` para lida
 - **Informação:**
   A automação de backups com timestamps é uma prática padrão em auditorias bancárias. Ela evita a sobrescrita de dados e permite o **Point-in-Time Recovery**, garantindo que possamos recuperar o estado exato do sistema em um momento específico do tempo.
 
-!```bash
+```bash
 #!/bin/bash
 
 # Definição de variáveis
@@ -157,7 +160,7 @@ tar -czf "$nome_arquivo" "$diretorio_backup"
 
 # Feedback ao usuário
 echo "Backup concluído com sucesso: $nome_arquivo"
-
+```
 **Resolução de Problemas:**
 Durante a automação, identifiquei falhas na chamada de variáveis e permissões de execução:
 - [Consulte aqui o Guia de Correção: FIX-SHELL-VARIABLE-REFERENCE.md](./FIX-SHELL-VARIABLE-REFERENCE.mb)
