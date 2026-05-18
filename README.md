@@ -110,3 +110,16 @@ Aprendi a utilizar metacaracteres para filtrar saídas do comando `ls` para lida
 
 - **Informação:**
   A movimentação de arquivos (`mv`) no Linux, quando feita dentro da mesma partição de disco, é quase instantânea, pois o sistema apenas altera os "ponteiros" do arquivo no sistema de arquivos, sem precisar reescrever os dados fisicamente.
+
+  ### Prática Geral de Navegação e Fluxos de Dados
+
+- **Fluxo de Trabalho:**
+  1. **Organização de Espaço:** `mkdir Docs` (Criação de diretório para estruturação de arquivos).
+  2. **Edição de Configurações:** `nano notas.txt` (Uso do editor de texto terminal para manipulação direta de arquivos).
+  3. **Geração de Objetos:** `touch novo.txt` (Criação instantânea de arquivos vazios).
+  4. **Manipulação de Saída (I/O Redirection):**
+     - **Escrita:** `echo "Olá, Mundo!" > saudacao.txt` (Uso do operador de sobrescrita).
+     - **Concatenação:** `echo "Bem-vindo ao Linux!" >> saudacao.txt` (Uso do operador de anexo para preservar dados anteriores).
+
+- **Informação:**
+  A distinção entre os operadores `>` e `>>` é um pilar da segurança operacional em Linux. O uso incorreto do operador de sobrescrita em arquivos de log ou tabelas de configuração pode causar perda de dados irreversível, sendo a concatenação (`>>`) a prática recomendada para registros históricos.
