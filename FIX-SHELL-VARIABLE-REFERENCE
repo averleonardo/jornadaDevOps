@@ -7,7 +7,7 @@ Ao executar o script `backup.sh`, o log apresentou a seguinte falha:
 ### Causa Raiz
 O erro ocorreu devido à falta do caractere especial `$` antes do nome da variável `diretorio_backup` na linha de execução do comando `tar`. 
 
-No Shell Script, quando escrevemos o nome da variável sem o `$`, o interpretador entende como uma string de texto comum (literal) e tenta buscar uma pasta que se chama exatamente "diretorio_backup" no disco, em vez de acessar o caminho `/home/leonardo/devops` armazenado na memória.
+No Shell Script, quando escrevemos o nome da variável sem o `$`, o interpretador entende como uma string de texto comum (literal) e tenta buscar uma pasta que se chama exatamente "diretorio_backup" no disco, em vez de acessar o caminho `/home/leonardoaver/devops` armazenado na memória.
 
 ### Solução
 Ajuste da sintaxe no arquivo `backup.sh` para referenciar corretamente o conteúdo da variável:
