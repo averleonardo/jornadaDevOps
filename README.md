@@ -186,3 +186,35 @@ Durante a automação, identifiquei falhas na chamada de variáveis e permissõe
 - [Consulte aqui o Guia de Correção: FIX-SHELL-VARIABLE-REFERENCE.md](./FIX-SHELL-VARIABLE-REFERENCE.mb)
   
   <img width="898" height="310" alt="image" src="https://github.com/user-attachments/assets/27a7093f-1a9d-4c8b-a5b1-76ca7c5e7359" />
+
+### Estruturas Condicionais no Shell (Tomada de Decisão)
+
+- **Sintaxe Fundamental:**
+  ```bash
+  if [ condição ]; then
+    # Bloco executado se verdadeiro
+  elif [ outra_condição ]; then
+    # Bloco alternativo
+  else
+    # Bloco de exceção (se nenhuma condição for atendida)
+  fi
+Operadores de Comparação Praticados:
+
+Strings: Uso de = (igualdade) e != (desigualdade). É obrigatório o uso de aspas duplas nas variáveis para evitar falhas de interpretação com espaços vazios.
+
+Numéricos (Inteiros): Uso de flags mnemônicas em vez de símbolos matemáticos tradicionais:
+
+-eq (Equal): Igualdade numérica.
+
+-ne (Not Equal): Desigualdade numérica.
+
+-gt (Greater Than): Maior que.
+
+-lt (Less Than): Menor que.
+
+-ge (Greater or Equal): Maior ou igual.
+
+Sistema de Arquivos: Uso da flag -e para validar a existência real de um arquivo ou diretório antes de interagir com ele.
+
+- **Informação:**
+No Linux Bash, os colchetes [ e ] não são apenas delimitadores visuais; eles são um atalho para o comando de sistema test. Por ser um comando, a existência de espaços em branco após o [ e antes do ] é estritamente obrigatória. A ausência desses espaços gera erro de sintaxe imediato (command not found).
